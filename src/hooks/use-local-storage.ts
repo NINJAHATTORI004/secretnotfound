@@ -39,7 +39,7 @@ export function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T 
   // by another tab or a different part of the app.
   useEffect(() => {
     setStoredValue(readValue(key, initialValue));
-  }, [key, initialValue]);
+  }, [key]);
 
   return [storedValue, setValue];
 }
