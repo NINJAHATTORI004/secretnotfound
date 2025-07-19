@@ -18,6 +18,14 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Add output configuration for standalone deployment
+  output: 'standalone',
+  // Ensure environment variables are available at runtime
+  env: {
+    GOOGLE_AI_API_KEY: process.env.GOOGLE_AI_API_KEY,
+    FIREBASE_PROJECT_ID: process.env.FIREBASE_PROJECT_ID,
+    FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
+  },
 };
 
 export default nextConfig;
